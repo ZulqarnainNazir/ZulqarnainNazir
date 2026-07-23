@@ -11,6 +11,10 @@
 [![Upwork](https://img.shields.io/badge/Upwork-14A800?style=for-the-badge&logo=upwork&logoColor=white)](https://www.upwork.com/freelancers/zulqarnainnazir)
 [![Email](https://img.shields.io/badge/Email-2CB1FF?style=for-the-badge&logo=gmail&logoColor=white)](mailto:zulqaranin.dev@gmail.com)
 
+<br/>
+
+<i>I help startups rescue legacy systems and ship production-grade SaaS & AI platforms — architecture that survives contact with real users, not just the demo.</i>
+
 </div>
 
 <br/>
@@ -47,6 +51,16 @@ $ whoami
 
 ---
 
+### 💪 Impact
+
+- ✔ Architected enterprise healthcare platforms handling real clinical workflows, built to HIPAA / HL7-FHIR standards
+- ✔ Modernized legacy Rails applications into scalable, maintainable systems — cutting technical debt for long-term velocity
+- ✔ Delivered 30+ production SaaS, AI, FinTech & Healthcare systems for clients across the US, EU & Middle East
+- ✔ Led engineering teams through architecture reviews, code review culture, and hands-on mentoring
+- ✔ Shipped production LLM integrations with structured outputs, validation layers & resilient fallback design
+
+---
+
 ### 🎯 Specialisations
 
 <table>
@@ -54,31 +68,31 @@ $ whoami
 <th align="left">Domain</th>
 <th align="left">What I Build</th>
 <th align="left">Stack</th>
-<th align="left">Practices & Standards</th>
+<th align="left">Standards</th>
 </tr>
 <tr>
 <td>🏥 <b>Healthcare</b></td>
 <td>Clinical workflow systems, patient-facing modules, secure data handling</td>
 <td>Rails · React · PostgreSQL · AWS</td>
-<td>Secure data architecture, audit-ready design</td>
+<td>HIPAA, HL7/FHIR</td>
 </tr>
 <tr>
 <td>💳 <b>FinTech</b></td>
 <td>Mortgage & lending platforms, banking API integrations, financial dashboards</td>
 <td>Rails · PostgreSQL · REST</td>
-<td>Encrypted data handling, financial-grade reliability</td>
+<td>PCI-DSS, GDPR</td>
 </tr>
 <tr>
 <td>🏢 <b>Enterprise SaaS</b></td>
 <td>Multi-tenant platforms, architecture strategy, technical leadership</td>
 <td>Node.js · React · Next.js · PostgreSQL</td>
-<td>Scalable multi-tenant patterns, CI/CD, code review culture</td>
+<td>SOC2-ready patterns</td>
 </tr>
 <tr>
 <td>🤖 <b>AI / LLM Automation</b></td>
 <td>Production LLM integrations, structured outputs, agent orchestration</td>
 <td>OpenAI · Python · Node.js</td>
-<td>Validation layers, resilient fallback mechanisms</td>
+<td>Validation layers, resilient fallback design</td>
 </tr>
 <tr>
 <td>🏘 <b>Real Estate / Marketplace</b></td>
