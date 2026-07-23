@@ -115,7 +115,7 @@ I design and ship **production AI systems**, not prototypes — agents that call
 - **Production hardening** — rate limits, error handling, observability, and graceful degradation for AI features that ship, not just demo
 
 <div align="center">
-<img src="assets/ai-architecture.svg" alt="Agent architecture: User → React/Next.js → API → Agent Orchestrator → LLM + Tools" width="700"/>
+<img src="ai-architecture.svg" alt="Agent architecture: User → React/Next.js → API → Agent Orchestrator → LLM + Tools" width="700"/>
 </div>
 
 <table>
