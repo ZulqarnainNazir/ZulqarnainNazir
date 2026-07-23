@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Zulqarnain Nazir — Principal Full Stack &amp; AI Systems Engineer</title>
+<meta name="description" content="Principal Full Stack Software Engineer, 12+ years. Enterprise SaaS, Healthcare, FinTech, and production AI/agent systems." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          bgdeep: '#0B0918',
+          bgpanel: '#15112B',
+          bgpanel2: '#1B1638',
+          violet: '#7F5AF0',
+          cyan: '#2CB1FF',
+          amber: '#FFD166',
+          muted: '#9D97C9',
+          hair: '#2A2450',
+        },
+        fontFamily: {
+          display: ['"Space Grotesk"', 'sans-serif'],
+          body: ['"Inter"', 'sans-serif'],
+          mono: ['"Fira Code"', 'monospace'],
+        },
+      },
+    },
+  }
+</script>
+
+<style>
+  html { scroll-behavior: smooth; }
+  body { background-color: #0B0918; }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
+  }
+
+  ::selection { background: #7F5AF0; color: #fff; }
+
+  a:focus-visible, button:focus-visible, summary:focus-visible {
+    outline: 2px solid #2CB1FF;
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  .blob {
+    position: absolute;
+    border-radius: 9999px;
+    filter: blur(90px);
+    opacity: 0.35;
+    pointer-events: none;
+  }
+  @keyframes floatA { 0%,100% { transform: translate(0,0); } 50% { transform: translate(30px,-24px); } }
+  @keyframes floatB { 0%,100% { transform: translate(0,0); } 50% { transform: translate(-24px,28px); } }
+  .blob-a { animation: floatA 14s ease-in-out infinite; }
+  .blob-b { animation: floatB 17s ease-in-out infinite; }
+
+  .cursor { display:inline-block; width:8px; height:1.1em; background:#2CB1FF; margin-left:2px; vertical-align:-2px; animation: blink 1s steps(1) infinite; }
+  @keyframes blink { 50% { opacity:0; } }
+
+  @keyframes shimmer { 0% { background-position: -300px 0; } 100% { background-position: 300px 0; } }
+  .skeleton {
+    background: linear-gradient(90deg, #1B1638 0%, #241E4A 50%, #1B1638 100%);
+    background-size: 300px 100%;
+    animation: shimmer 1.4s ease-in-out infinite;
+  }
+
+  .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+
+  .card-glow {
+    transition: border-color .25s ease, transform .25s ease, box-shadow .25s ease;
+  }
+  .card-glow:hover {
+    border-color: #7F5AF0;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px -10px rgba(127,90,240,0.45);
+  }
+
+  .badge-key { font-family: 'Fira Code', monospace; letter-spacing: 0.02em; }
+</style>
+</head>
+
+<body class="font-body text-[#F5F3FF] antialiased">
+
+  <!-- NAV -->
+  <header class="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-[#0B0918]/70 border-b border-hair">
+    <nav class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="#top" class="font-display font-700 text-lg tracking-tight">ZN<span class="text-violet">.</span></a>
+      <div class="hidden md:flex items-center gap-8 text-sm text-muted font-medium">
+        <a href="#work" class="hover:text-white transition-colors">Work</a>
+        <a href="#ai" class="hover:text-white transition-colors">AI Systems</a>
+        <a href="#experience" class="hover:text-white transition-colors">Experience</a>
+        <a href="#stack" class="hover:text-white transition-colors">Stack</a>
+        <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+      </div>
+      <a href="#contact" class="text-sm font-semibold px-4 py-2 rounded-lg bg-violet hover:bg-violet/80 transition-colors">Let's talk</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="top" class="relative overflow-hidden pt-40 pb-24 px-6">
+    <div class="blob blob-a w-[420px] h-[420px] bg-violet -top-20 -left-20"></div>
+    <div class="blob blob-b w-[380px] h-[380px] bg-cyan top-40 right-0"></div>
+
+    <div class="max-w-6xl mx-auto relative grid lg:grid-cols-2 gap-14 items-center">
+      <div class="reveal in">
+        <p class="badge-key text-xs uppercase text-cyan mb-4">Principal Full Stack &amp; AI Systems Engineer</p>
+        <h1 class="font-display font-700 text-5xl sm:text-6xl leading-[1.05] tracking-tight mb-6">
+          Zulqarnain<br/>Nazir
+        </h1>
+        <p class="text-muted text-lg leading-relaxed mb-8 max-w-lg">
+          I help startups rescue legacy systems and ship production-grade SaaS &amp; AI platforms — architecture that survives contact with real users, not just the demo.
+        </p>
+        <div class="flex flex-wrap gap-4 mb-10">
+          <a href="#work" class="px-5 py-3 rounded-lg bg-violet hover:bg-violet/80 font-semibold text-sm transition-colors">View my work</a>
+          <a href="https://www.upwork.com/freelancers/zulqarnainnazir" target="_blank" rel="noopener" class="px-5 py-3 rounded-lg border border-hair hover:border-cyan font-semibold text-sm transition-colors">Book a call</a>
+        </div>
+        <div class="flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted badge-key">
+          <span><span class="text-white font-semibold">12+</span> years</span>
+          <span class="text-hair">•</span>
+          <span><span class="text-white font-semibold">30+</span> production systems</span>
+          <span class="text-hair">•</span>
+          <span><span class="text-white font-semibold">4.9/5</span> client rating</span>
+        </div>
+      </div>
+
+      <!-- SIGNATURE: agent trace terminal -->
+      <div class="reveal in">
+        <div class="rounded-2xl border border-hair bg-bgpanel/80 shadow-2xl shadow-black/40 overflow-hidden">
+          <div class="flex items-center gap-2 px-4 py-3 border-b border-hair bg-bgpanel2/60">
+            <span class="w-3 h-3 rounded-full bg-[#FF5F56]"></span>
+            <span class="w-3 h-3 rounded-full bg-[#FFBD2E]"></span>
+            <span class="w-3 h-3 rounded-full bg-[#27C93F]"></span>
+            <span class="badge-key text-xs text-muted ml-3">agent_trace.log</span>
+          </div>
+          <div id="trace" class="p-6 font-mono text-[13px] leading-7 min-h-[260px]"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STAT STRIP -->
+  <section class="px-6 pb-4">
+    <div class="max-w-6xl mx-auto reveal flex flex-wrap justify-center gap-3">
+      <span class="badge-key text-xs px-4 py-2 rounded-full bg-bgpanel border border-hair">EXPERIENCE <b class="text-violet">12+ YEARS</b></span>
+      <span class="badge-key text-xs px-4 py-2 rounded-full bg-bgpanel border border-hair">JOB SUCCESS <b class="text-cyan">100%</b></span>
+      <span class="badge-key text-xs px-4 py-2 rounded-full bg-bgpanel border border-hair">RATING <b class="text-amber">4.9/5</b></span>
+      <span class="badge-key text-xs px-4 py-2 rounded-full bg-bgpanel border border-hair">UPWORK <b class="text-[#3CE070]">TOP RATED PLUS</b></span>
+      <span class="badge-key text-xs px-4 py-2 rounded-full bg-bgpanel border border-hair">HOURS <b class="text-violet">5.2K+</b></span>
+      <span class="badge-key text-xs px-4 py-2 rounded-full bg-bgpanel border border-hair">CONTRACTS <b class="text-cyan">34</b></span>
+    </div>
+  </section>
+
+  <!-- SPECIALISATIONS -->
+  <section id="specialisations" class="max-w-6xl mx-auto px-6 py-24">
+    <div class="reveal mb-12">
+      <p class="badge-key text-xs uppercase text-cyan mb-3">Where I work</p>
+      <h2 class="font-display font-700 text-3xl sm:text-4xl">Specialisations</h2>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+      <div class="reveal card-glow p-6 rounded-xl border border-hair bg-bgpanel">
+        <div class="text-2xl mb-3">🏥</div>
+        <h3 class="font-display font-600 text-lg mb-2">Healthcare</h3>
+        <p class="text-muted text-sm mb-4">Clinical workflow systems, patient-facing modules, secure data handling.</p>
+        <span class="badge-key text-[11px] text-cyan">HIPAA · HL7/FHIR</span>
+      </div>
+
+      <div class="reveal card-glow p-6 rounded-xl border border-hair bg-bgpanel">
+        <div class="text-2xl mb-3">💳</div>
+        <h3 class="font-display font-600 text-lg mb-2">FinTech</h3>
+        <p class="text-muted text-sm mb-4">Mortgage &amp; lending platforms, banking API integrations, dashboards.</p>
+        <span class="badge-key text-[11px] text-cyan">PCI-DSS · GDPR</span>
+      </div>
+
+      <div class="reveal card-glow p-6 rounded-xl border border-hair bg-bgpanel">
+        <div class="text-2xl mb-3">🏢</div>
+        <h3 class="font-display font-600 text-lg mb-2">Enterprise SaaS</h3>
+        <p class="text-muted text-sm mb-4">Multi-tenant platforms, architecture strategy, technical leadership.</p>
+        <span class="badge-key text-[11px] text-cyan">SOC2-ready patterns</span>
+      </div>
+
+      <div class="reveal card-glow p-6 rounded-xl border border-hair bg-bgpanel">
+        <div class="text-2xl mb-3">🤖</div>
+        <h3 class="font-display font-600 text-lg mb-2">AI / LLM Automation</h3>
+        <p class="text-muted text-sm mb-4">Production LLM integrations, structured outputs, agent orchestration.</p>
+        <span class="badge-key text-[11px] text-cyan">Validation + fallback design</span>
+      </div>
+
+      <div class="reveal card-glow p-6 rounded-xl border border-hair bg-bgpanel">
+        <div class="text-2xl mb-3">🏘</div>
+        <h3 class="font-display font-600 text-lg mb-2">Real Estate / Marketplace</h3>
+        <p class="text-muted text-sm mb-4">Data intelligence platforms, real-time analytics.</p>
+        <span class="badge-key text-[11px] text-cyan">Query &amp; infra optimization</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- AI & AGENTIC -->
+  <section id="ai" class="relative px-6 py-24 border-y border-hair bg-bgpanel/40">
+    <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-14 items-center">
+      <div class="reveal">
+        <p class="badge-key text-xs uppercase text-cyan mb-3">Part of the daily workflow</p>
+        <h2 class="font-display font-700 text-3xl sm:text-4xl mb-6">AI &amp; Agentic Engineering</h2>
+        <p class="text-muted mb-6 leading-relaxed">I design and ship production AI systems — agents that call tools, cite sources, and hold up under real usage, not just demo scripts.</p>
+        <ul class="space-y-4 text-sm">
+          <li class="flex gap-3"><span class="text-violet">→</span><span><b class="text-white">Agent orchestration</b> <span class="text-muted">— multi-step planning, tool-calling, structured outputs with validation &amp; fallback design</span></span></li>
+          <li class="flex gap-3"><span class="text-violet">→</span><span><b class="text-white">RAG &amp; retrieval</b> <span class="text-muted">— grounding LLM output in real data instead of hallucinated answers</span></span></li>
+          <li class="flex gap-3"><span class="text-violet">→</span><span><b class="text-white">Multi-channel delivery</b> <span class="text-muted">— chat agents accessible via web, WhatsApp, Telegram &amp; email</span></span></li>
+          <li class="flex gap-3"><span class="text-violet">→</span><span><b class="text-white">Production hardening</b> <span class="text-muted">— rate limits, observability, graceful degradation</span></span></li>
+        </ul>
+      </div>
+      <div class="reveal rounded-2xl border border-hair bg-bgpanel p-4">
+        <img src="assets/ai-architecture.svg" alt="Agent architecture diagram: user through client, API, agent orchestrator, to LLM and tools" class="w-full rounded-lg" />
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="work" class="max-w-6xl mx-auto px-6 py-24">
+    <div class="reveal mb-12">
+      <p class="badge-key text-xs uppercase text-cyan mb-3">Selected work</p>
+      <h2 class="font-display font-700 text-3xl sm:text-4xl">Projects</h2>
+    </div>
+    <div id="projects-grid" class="grid sm:grid-cols-2 gap-5"></div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="max-w-6xl mx-auto px-6 py-24">
+    <div class="reveal mb-12">
+      <p class="badge-key text-xs uppercase text-cyan mb-3">Track record</p>
+      <h2 class="font-display font-700 text-3xl sm:text-4xl">Experience</h2>
+    </div>
+
+    <div class="relative border-l border-hair ml-2 space-y-10">
+
+      <div class="reveal relative pl-8">
+        <span class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-violet"></span>
+        <p class="badge-key text-xs text-muted mb-1">2025 — Present</p>
+        <h3 class="font-display font-600 text-lg">Principal Full Stack Software Engineer <span class="text-muted font-body font-normal">· Revivo Technology</span></h3>
+        <p class="text-muted text-sm mt-2 max-w-2xl">Leading architecture &amp; development of enterprise SaaS, AI, and healthcare platforms. Driving engineering excellence through architecture reviews, coding standards, and mentoring. Delivering production LLM integrations with validation &amp; fallback layers.</p>
+      </div>
+
+      <div class="reveal relative pl-8">
+        <span class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-cyan"></span>
+        <p class="badge-key text-xs text-muted mb-1">2020 — Present</p>
+        <h3 class="font-display font-600 text-lg">Full Stack Architect &amp; Technical Consultant <span class="text-muted font-body font-normal">· Upwork</span></h3>
+        <p class="text-muted text-sm mt-2 max-w-2xl">Delivered 30+ enterprise SaaS, AI, FinTech, Healthcare, Marketplace &amp; Real Estate applications. Top Rated Plus (Top 3% worldwide), 100% Job Success, 5,200+ hours, 34 contracts.</p>
+      </div>
+
+      <div class="reveal relative pl-8">
+        <span class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-cyan"></span>
+        <p class="badge-key text-xs text-muted mb-1">2021 — 2024</p>
+        <h3 class="font-display font-600 text-lg">Senior Software Engineer <span class="text-muted font-body font-normal">· D3velopers</span></h3>
+        <p class="text-muted text-sm mt-2 max-w-2xl">Built and optimized REST APIs for enterprise React applications. Improved backend performance through query optimization and database redesign.</p>
+      </div>
+
+      <div class="reveal relative pl-8">
+        <span class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-cyan"></span>
+        <p class="badge-key text-xs text-muted mb-1">2022 — 2023</p>
+        <h3 class="font-display font-600 text-lg">Senior Ruby on Rails Developer <span class="text-muted font-body font-normal">· Kinship, USA</span></h3>
+        <p class="text-muted text-sm mt-2 max-w-2xl">Designed REST &amp; GraphQL APIs powering nationwide reporting systems (Shelter Animals Count / ASPCA).</p>
+      </div>
+
+      <div class="reveal relative pl-8">
+        <span class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-cyan"></span>
+        <p class="badge-key text-xs text-muted mb-1">2016 — 2021</p>
+        <h3 class="font-display font-600 text-lg">Full Stack Software Engineer <span class="text-muted font-body font-normal">· Analytico Technologies</span></h3>
+        <p class="text-muted text-sm mt-2 max-w-2xl">Built enterprise SaaS applications across Node.js, React, Rails, MongoDB &amp; PostgreSQL. Applied TDD/BDD methodologies within Agile Scrum teams.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TECH STACK -->
+  <section id="stack" class="max-w-6xl mx-auto px-6 py-24">
+    <div class="reveal mb-12">
+      <p class="badge-key text-xs uppercase text-cyan mb-3">Toolbox</p>
+      <h2 class="font-display font-700 text-3xl sm:text-4xl">Tech Stack</h2>
+    </div>
+    <div class="reveal space-y-8">
+      <div>
+        <p class="badge-key text-xs text-muted mb-3">LANGUAGES</p>
+        <img src="https://skillicons.dev/icons?i=js,ts,ruby,py,html,css&theme=dark" alt="JavaScript, TypeScript, Ruby, Python, HTML, CSS" />
+      </div>
+      <div>
+        <p class="badge-key text-xs text-muted mb-3">FRAMEWORKS &amp; FRONTEND</p>
+        <img src="https://skillicons.dev/icons?i=react,nextjs,redux,tailwind,nodejs,express,nestjs,rails&theme=dark" alt="React, Next.js, Redux, Tailwind, Node.js, Express, NestJS, Rails" />
+      </div>
+      <div>
+        <p class="badge-key text-xs text-muted mb-3">DATABASES &amp; CLOUD</p>
+        <img src="https://skillicons.dev/icons?i=postgres,mongodb,mysql,aws,gcp,docker,kubernetes&theme=dark" alt="PostgreSQL, MongoDB, MySQL, AWS, GCP, Docker, Kubernetes" />
+      </div>
+      <div>
+        <p class="badge-key text-xs text-muted mb-3">TOOLS &amp; PRACTICES</p>
+        <img src="https://skillicons.dev/icons?i=git,github,graphql,jenkins,githubactions,jira,postman&theme=dark" alt="Git, GitHub, GraphQL, Jenkins, GitHub Actions, Jira, Postman" />
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="relative px-6 py-28 border-t border-hair overflow-hidden">
+    <div class="blob blob-a w-[380px] h-[380px] bg-violet bottom-0 left-1/3"></div>
+    <div class="max-w-3xl mx-auto text-center relative reveal">
+      <p class="badge-key text-xs uppercase text-cyan mb-4">Let's work together</p>
+      <h2 class="font-display font-700 text-4xl sm:text-5xl mb-6">Let's build something reliable.</h2>
+      <p class="text-muted mb-10 max-w-xl mx-auto">Open to full-time roles, contract work, and technical consulting — architecture reviews, technical leadership, AI/LLM integration, and full-stack delivery from MVP to production scale.</p>
+      <div class="flex flex-wrap gap-4 justify-center mb-14">
+        <a href="https://www.upwork.com/freelancers/zulqarnainnazir" target="_blank" rel="noopener" class="px-6 py-3 rounded-lg bg-[#14A800] font-semibold text-sm hover:opacity-90 transition-opacity">Hire me on Upwork</a>
+        <a href="mailto:zulqaranin.dev@gmail.com" class="px-6 py-3 rounded-lg bg-cyan text-[#0B0918] font-semibold text-sm hover:opacity-90 transition-opacity">Email me</a>
+        <a href="https://www.linkedin.com/in/zulqarnain-nazir/" target="_blank" rel="noopener" class="px-6 py-3 rounded-lg border border-hair font-semibold text-sm hover:border-cyan transition-colors">Connect on LinkedIn</a>
+      </div>
+      <div class="flex justify-center gap-6 text-sm text-muted badge-key">
+        <a href="https://github.com/ZulqarnainNazir" target="_blank" rel="noopener" class="hover:text-white transition-colors">GitHub</a>
+        <span class="text-hair">/</span>
+        <a href="https://www.upwork.com/freelancers/zulqarnainnazir" target="_blank" rel="noopener" class="hover:text-white transition-colors">Upwork</a>
+        <span class="text-hair">/</span>
+        <a href="https://www.linkedin.com/in/zulqarnain-nazir/" target="_blank" rel="noopener" class="hover:text-white transition-colors">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="text-center text-xs text-muted py-8 border-t border-hair badge-key">
+    © <span id="year"></span> Zulqarnain Nazir · Lahore, Pakistan
+  </footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => io.observe(el));
+
+  // Hero agent trace typing animation
+  const traceLines = [
+    { t: '$ agent.run("evaluate_candidate_fit")', c: '#F5F3FF' },
+    { t: '→ planning steps...', c: '#9D97C9' },
+    { t: '→ calling tool: architecture_review()', c: '#2CB1FF' },
+    { t: '→ calling tool: production_history()', c: '#2CB1FF' },
+    { t: '→ validating output... ✓', c: '#FFD166' },
+    { t: '→ result: production-ready, 12+ yrs verified', c: '#3CE070' },
+    { t: '✓ done in 1.2s', c: '#7F5AF0' },
+  ];
+  const traceEl = document.getElementById('trace');
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  async function typeTrace() {
+    traceEl.innerHTML = '';
+    for (const line of traceLines) {
+      const div = document.createElement('div');
+      div.style.color = line.c;
+      traceEl.appendChild(div);
+      if (reduceMotion) { div.textContent = line.t; continue; }
+      for (let i = 0; i < line.t.length; i++) {
+        div.textContent += line.t[i];
+        await new Promise(r => setTimeout(r, 14));
+      }
+      await new Promise(r => setTimeout(r, 220));
+    }
+    const cursor = document.createElement('span');
+    cursor.className = 'cursor';
+    traceEl.appendChild(cursor);
+    if (!reduceMotion) {
+      await new Promise(r => setTimeout(r, 2200));
+      typeTrace();
+    }
+  }
+  typeTrace();
+
+  // Projects: skeleton -> data reveal
+  const projects = [
+    { name: 'CoBrokerAI', featured: true, desc: 'Agentic AI platform for commercial real estate — built solo, end-to-end. Plans multi-step research, calls tools, and traces sources. Live across web, Telegram, WhatsApp & email.', tags: ['Rails','Node.js','React','LLM Agents'], url: 'https://www.cobroker.ai/' },
+    { name: 'BlueBird', desc: 'Enterprise healthcare information system with secure clinical workflows and patient data management.', tags: ['Rails','React','PostgreSQL','AWS'] },
+    { name: 'Flyer', desc: 'Real estate data intelligence SaaS with real-time analytics and optimized cloud infrastructure.', tags: ['React','Rails','AWS','Docker'] },
+    { name: 'LoanLink24', desc: 'Multi-bank mortgage comparison platform with secure onboarding and lender integration workflows.', tags: ['Rails','PostgreSQL','React'] },
+    { name: 'TENNA', desc: 'Construction asset & fleet management platform with real-time equipment tracking dashboards.', tags: ['Rails','React','PostgreSQL','AWS'] },
+    { name: 'Shelter Animals Count', desc: 'Nationwide reporting system for Kinship / ASPCA, serving distributed engineering teams.', tags: ['Rails','MySQL','GraphQL'] },
+  ];
+
+  const grid = document.getElementById('projects-grid');
+
+  function skeletonCard() {
+    const d = document.createElement('div');
+    d.className = 'rounded-xl border border-hair bg-bgpanel p-6';
+    d.innerHTML = `
+      <div class="skeleton h-4 w-1/3 rounded mb-4"></div>
+      <div class="skeleton h-3 w-full rounded mb-2"></div>
+      <div class="skeleton h-3 w-5/6 rounded mb-2"></div>
+      <div class="skeleton h-3 w-2/3 rounded mb-4"></div>
+      <div class="flex gap-2">
+        <div class="skeleton h-5 w-14 rounded-full"></div>
+        <div class="skeleton h-5 w-14 rounded-full"></div>
+      </div>`;
+    return d;
+  }
+
+  for (let i = 0; i < projects.length; i++) grid.appendChild(skeletonCard());
+
+  function projectCard(p) {
+    const wrap = document.createElement(p.url ? 'a' : 'div');
+    if (p.url) { wrap.href = p.url; wrap.target = '_blank'; wrap.rel = 'noopener'; }
+    wrap.className = `reveal in card-glow rounded-xl border border-hair bg-bgpanel p-6 ${p.featured ? 'sm:col-span-2 bg-gradient-to-br from-bgpanel to-bgpanel2' : ''}`;
+    wrap.innerHTML = `
+      <div class="flex items-center gap-2 mb-2">
+        ${p.featured ? '<span class="text-lg">🤖</span>' : ''}
+        <h3 class="font-display font-600 text-lg">${p.name}</h3>
+      </div>
+      <p class="text-muted text-sm mb-4">${p.desc}</p>
+      <div class="flex flex-wrap gap-2">
+        ${p.tags.map(t => `<span class="badge-key text-[11px] px-2 py-1 rounded-full border border-hair text-muted">${t}</span>`).join('')}
+      </div>`;
+    return wrap;
+  }
+
+  setTimeout(() => {
+    grid.innerHTML = '';
+    projects.forEach(p => grid.appendChild(projectCard(p)));
+  }, 900);
+</script>
+
+</body>
+</html>
