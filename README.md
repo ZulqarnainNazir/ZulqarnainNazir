@@ -32,7 +32,7 @@ $ whoami
 
 ![Experience](https://img.shields.io/badge/Experience-12%2B_Years-7F5AF0?style=for-the-badge)
 ![Success](https://img.shields.io/badge/Job_Success-100%25-2CB1FF?style=for-the-badge)
-![Rating](https://img.shields.io/badge/Client_Rating-4.9%2F5-FFD166?style=for-the-badge)
+![Rating](https://img.shields.io/badge/Client_Rating-5%2F5-FFD166?style=for-the-badge)
 ![Top Rated](https://img.shields.io/badge/Upwork-Top_Rated_Plus-14A800?style=for-the-badge)
 ![Hours](https://img.shields.io/badge/Freelance_Hours-5.2K%2B-7F5AF0?style=for-the-badge)
 ![Projects](https://img.shields.io/badge/Contracts_Delivered-34-2CB1FF?style=for-the-badge)
