@@ -192,7 +192,7 @@
         <div class="text-2xl mb-3">🤖</div>
         <h3 class="font-display font-600 text-lg mb-2">AI / LLM Automation</h3>
         <p class="text-muted text-sm mb-4">Production LLM integrations, structured outputs, agent orchestration.</p>
-        <span class="badge-key text-[11px] text-cyan">Validation + fallback design</span>
+        <span class="badge-key text-[11px] text-cyan">Python (FastAPI) · OpenAI · Node.js</span>
       </div>
 
       <div class="reveal card-glow p-6 rounded-xl border border-hair bg-bgpanel">
@@ -290,7 +290,7 @@
     <div class="reveal space-y-8">
       <div>
         <p class="badge-key text-xs text-muted mb-3">LANGUAGES</p>
-        <img src="https://skillicons.dev/icons?i=js,ts,ruby,py,html,css&theme=dark" alt="JavaScript, TypeScript, Ruby, Python, HTML, CSS" />
+        <img src="https://skillicons.dev/icons?i=js,ts,ruby,py,fastapi,html,css&theme=dark" alt="JavaScript, TypeScript, Ruby, Python, FastAPI, HTML, CSS" />
       </div>
       <div>
         <p class="badge-key text-xs text-muted mb-3">FRAMEWORKS &amp; FRONTEND</p>
@@ -316,7 +316,7 @@
       <p class="text-muted mb-10 max-w-xl mx-auto">Open to full-time roles, contract work, and technical consulting — architecture reviews, technical leadership, AI/LLM integration, and full-stack delivery from MVP to production scale.</p>
       <div class="flex flex-wrap gap-4 justify-center mb-14">
         <a href="https://www.upwork.com/freelancers/zulqarnainnazir" target="_blank" rel="noopener" class="px-6 py-3 rounded-lg bg-[#14A800] font-semibold text-sm hover:opacity-90 transition-opacity">Hire me on Upwork</a>
-        <a href="mailto:zulqaranin.dev@gmail.com" class="px-6 py-3 rounded-lg bg-cyan text-[#0B0918] font-semibold text-sm hover:opacity-90 transition-opacity">Email me</a>
+        <a href="mailto:zulqarnainnazir1@gmail.com" class="px-6 py-3 rounded-lg bg-cyan text-[#0B0918] font-semibold text-sm hover:opacity-90 transition-opacity">Email me</a>
         <a href="https://www.linkedin.com/in/zulqarnain-nazir/" target="_blank" rel="noopener" class="px-6 py-3 rounded-lg border border-hair font-semibold text-sm hover:border-cyan transition-colors">Connect on LinkedIn</a>
       </div>
       <div class="flex justify-center gap-6 text-sm text-muted badge-key">
@@ -382,11 +382,16 @@
   // Projects: skeleton -> data reveal
   const projects = [
     { name: 'CoBrokerAI', featured: true, desc: 'Agentic AI platform for commercial real estate — built solo, end-to-end. Plans multi-step research, calls tools, and traces sources. Live across web, Telegram, WhatsApp & email.', tags: ['Rails','Node.js','React','LLM Agents'], url: 'https://www.cobroker.ai/' },
-    { name: 'BlueBird', desc: 'Enterprise healthcare information system with secure clinical workflows and patient data management.', tags: ['Rails','React','PostgreSQL','AWS'] },
-    { name: 'Flyer', desc: 'Real estate data intelligence SaaS with real-time analytics and optimized cloud infrastructure.', tags: ['React','Rails','AWS','Docker'] },
-    { name: 'LoanLink24', desc: 'Multi-bank mortgage comparison platform with secure onboarding and lender integration workflows.', tags: ['Rails','PostgreSQL','React'] },
-    { name: 'TENNA', desc: 'Construction asset & fleet management platform with real-time equipment tracking dashboards.', tags: ['Rails','React','PostgreSQL','AWS'] },
-    { name: 'Shelter Animals Count', desc: 'Nationwide reporting system for Kinship / ASPCA, serving distributed engineering teams.', tags: ['Rails','MySQL','GraphQL'] },
+    { name: 'PureSentinel', desc: 'Food safety & quality management LIMS platform — audited and rebuilt a buggy MVP, then extended it with AI automation for compliance workflows, audits, and lab sample management.', tags: ['Python','FastAPI','React','Next.js'], url: 'https://puresentinel.com/' },
+    { name: 'Flyer', desc: 'CRE marketing & data intelligence platform — interactive property maps (Leaflet.js), GIS/demographic overlays, automated flyer & tour-book generation. Brokers ship professional marketing materials in minutes, no technical skill needed.', tags: ['Rails','React','Leaflet.js','GIS APIs'], url: 'https://flyer.io/' },
+    { name: 'IntelMS', desc: 'Healthcare staffing & workforce management platform — credentialing, scheduling, and compliance tracking for staffing agencies and healthcare organizations, replacing spreadsheet-based processes.', tags: ['Rails','PostgreSQL','Compliance workflows'], url: 'https://www.intelms.com/index.html' },
+    { name: 'TENNA', desc: 'Construction asset & fleet management platform with real-time equipment tracking, Elasticsearch-powered search, and live ELD data streams.', tags: ['Rails','React','Node.js','Elasticsearch','AWS'], url: 'https://www.tenna.com/' },
+    { name: 'Folio DB', desc: 'Property portfolio platform for asset tracking, project reports, sprint management, and investment recommendations.', tags: ['Rails','Elasticsearch'], url: 'https://foliodb.net/' },
+    { name: 'Stock Savvy', desc: 'Inventory management system integrated with Shopify stores for real-time stock tracking and analytics.', tags: ['Rails','React','Shopify'], url: 'https://app.getstocksavvy.com/' },
+    { name: 'FutureRx', desc: 'Healthcare platform frontend — responsive React applications with reusable UI components, Redux state management, and REST API integrations for clinical workflows.', tags: ['Python','React','Redux'], url: 'https://futurerx.com/' },
+    { name: 'PM Press', desc: 'Rescued and modernized a 17-year-old legacy Rails codebase — upgraded to the latest Ruby on Rails, scaled the server infrastructure, and shipped new features and data exports.', tags: ['Ruby on Rails','Legacy Modernization','Infra'], url: 'https://pmpress.org/' },
+    { name: 'Baufi24', desc: 'High-scale German mortgage & lending platform — backend systems integrating complex banking APIs and XML-based financial data feeds for mortgage processing workflows.', tags: ['Ruby on Rails','Banking APIs','XML'], url: 'https://www.baufi24.de/' },
+    { name: 'Shelter Animals Count', desc: 'Nationwide reporting system for Kinship / ASPCA, serving distributed engineering teams.', tags: ['Rails','MySQL','GraphQL'], url: 'https://www.shelteranimalscount.org/' },
   ];
 
   const grid = document.getElementById('projects-grid');
