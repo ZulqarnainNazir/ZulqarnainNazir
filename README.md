@@ -6,7 +6,7 @@
 
 <br/>
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-7F5AF0?style=for-the-badge&logo=googlechrome&logoColor=white)](https://your-portfolio-website.com)
+[![Portfolio](https://img.shields.io/badge/Portfolio-7F5AF0?style=for-the-badge&logo=googlechrome&logoColor=white)](https://zulqarnainnazir.github.io/ZulqarnainNazir/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/zulqarnain-nazir/)
 [![Upwork](https://img.shields.io/badge/Upwork-14A800?style=for-the-badge&logo=upwork&logoColor=white)](https://www.upwork.com/freelancers/zulqarnainnazir)
 [![Email](https://img.shields.io/badge/Email-2CB1FF?style=for-the-badge&logo=gmail&logoColor=white)](mailto:zulqarnainnazir1@gmail.com)
