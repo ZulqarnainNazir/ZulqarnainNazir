@@ -51,13 +51,14 @@ $ whoami
 
 ---
 
-### 💪 Impact
+### 🏆 Selected Results
 
-- ✔ Architected enterprise healthcare platforms handling real clinical workflows, built to HIPAA / HL7-FHIR standards
-- ✔ Modernized legacy Rails applications into scalable, maintainable systems — cutting technical debt for long-term velocity
-- ✔ Delivered 30+ production SaaS, AI, FinTech & Healthcare systems for clients across the US, EU & Middle East
-- ✔ Led engineering teams through architecture reviews, code review culture, and hands-on mentoring
-- ✔ Shipped production LLM integrations with structured outputs, validation layers & resilient fallback design
+- ✔ Architected enterprise healthcare platforms handling real clinical workflows, built to **HIPAA / HL7-FHIR** standards
+- ✔ Built and shipped **CoBrokerAI** solo end-to-end — an agentic AI platform for commercial real estate, live in production
+- ✔ Modernized legacy Rails applications into scalable systems — cutting technical debt for long-term velocity
+- ✔ Delivered **30+ production systems** (SaaS, AI, FinTech, Healthcare) for clients across the US, EU & Middle East
+- ✔ **5,200+ hours, 100% Job Success, Top Rated Plus** — Top 3% on Upwork
+- ✔ Led engineering teams through architecture reviews, code review culture & hands-on mentoring
 
 ---
 
@@ -100,6 +101,34 @@ $ whoami
 <td>React · Rails · AWS · Docker</td>
 <td>Query & infra optimization for scale</td>
 </tr>
+</table>
+
+---
+
+### 🤖 AI & Agentic Engineering
+
+I design and ship **production AI systems**, not prototypes — agents that call tools, cite sources, and hold up under real usage:
+
+- **Agent orchestration** — multi-step planning, tool-calling, structured outputs with validation & resilient fallback design
+- **RAG & retrieval pipelines** — grounding LLM outputs in real data instead of hallucinated answers
+- **Multi-channel agent delivery** — chat interfaces accessible via web, WhatsApp, Telegram & email
+- **Production hardening** — rate limits, error handling, observability, and graceful degradation for AI features that ship, not just demo
+
+<div align="center">
+<img src="assets/ai-architecture.svg" alt="Agent architecture: User → React/Next.js → API → Agent Orchestrator → LLM + Tools" width="700"/>
+</div>
+
+<table>
+<tr><th align="left">🏗 Flagship: CoBrokerAI</th></tr>
+<tr><td>
+
+An **agentic AI platform for commercial real estate** — <a href="https://www.cobroker.ai/">cobroker.ai</a> — built solo, end-to-end, as sole senior developer.
+
+The agent plans multi-step research (trade area analysis, brand-fit scoring, site-selection questions), calls tools to gather data, and traces its own work back to sources — accessible via web, Telegram, WhatsApp & email.
+
+`Ruby on Rails` `Node.js` `React` `Next.js` `LLM / Agent Orchestration`
+
+</td></tr>
 </table>
 
 ---
@@ -176,6 +205,7 @@ $ whoami
 
 <table>
 <tr><th align="left">Project</th><th align="left">Description</th><th align="left">Tech</th></tr>
+<tr><td><b>🤖 CoBrokerAI</b></td><td><a href="https://www.cobroker.ai/">cobroker.ai</a> — agentic AI platform for commercial real estate, built solo end-to-end</td><td>Rails · Node.js · React · LLM Agents</td></tr>
 <tr><td><b>BlueBird</b></td><td>Enterprise healthcare information system</td><td>Rails · React · PostgreSQL · AWS</td></tr>
 <tr><td><b>Flyer</b></td><td>Real estate data intelligence SaaS, real-time analytics</td><td>React · Rails · AWS · Docker</td></tr>
 <tr><td><b>LoanLink24</b></td><td>Multi-bank mortgage comparison platform</td><td>Rails · PostgreSQL · React</td></tr>
@@ -194,8 +224,6 @@ $ whoami
 
 ![](https://streak-stats.demolab.com?user=ZulqarnainNazir&theme=transparent&background=00000000&ring=7F5AF0&fire=2CB1FF&sideLabels=c9d1d9&dates=888888&border=7F5AF0&stroke=7F5AF0)
 
-![](https://github-profile-trophy.vercel.app/?username=ZulqarnainNazir&theme=algolia&no-frame=true&no-bg=true&row=1&column=6)
-
 </div>
 
 ---
@@ -205,7 +233,7 @@ $ whoami
 > 12+ years turning ambiguous product ideas into production systems that handle real users, real data, and real revenue — without the rewrite six months later.
 
 **Why teams bring me in:**
-- 🏗 **I own outcomes, not tickets** — from architecture decisions to the 2am production incident
+- 🏗 **I stay involved from architecture through production** — designing systems, reviewing code, solving incidents, and helping teams deliver reliably
 - 🎯 **12+ years across the full stack** — I ramp on unfamiliar stacks fast and don't over-engineer
 - 🧭 **I mentor as I build** — code reviews and architecture docs that make the team faster, not just the codebase
 
