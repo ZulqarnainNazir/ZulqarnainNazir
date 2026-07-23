@@ -9,7 +9,7 @@
 [![Portfolio](https://img.shields.io/badge/Portfolio-7F5AF0?style=for-the-badge&logo=googlechrome&logoColor=white)](https://your-portfolio-website.com)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/zulqarnain-nazir/)
 [![Upwork](https://img.shields.io/badge/Upwork-14A800?style=for-the-badge&logo=upwork&logoColor=white)](https://www.upwork.com/freelancers/zulqarnainnazir)
-[![Email](https://img.shields.io/badge/Email-2CB1FF?style=for-the-badge&logo=gmail&logoColor=white)](mailto:zulqaranin.dev@gmail.com)
+[![Email](https://img.shields.io/badge/Email-2CB1FF?style=for-the-badge&logo=gmail&logoColor=white)](mailto:zulqarnainnazir1@gmail.com)
 
 <br/>
 
@@ -242,7 +242,7 @@ Open to **full-time roles, contract work, and technical consulting** — archite
 <div align="center">
 
 [![Book on Upwork](https://img.shields.io/badge/📅_Hire_me_on_Upwork-14A800?style=for-the-badge)](https://www.upwork.com/freelancers/zulqarnainnazir)
-[![Email me](https://img.shields.io/badge/✉️_Email_me-2CB1FF?style=for-the-badge)](mailto:zulqaranin.dev@gmail.com)
+[![Email me](https://img.shields.io/badge/✉️_Email_me-2CB1FF?style=for-the-badge)](mailto:zulqarnainnazir1@gmail.com)
 [![Connect on LinkedIn](https://img.shields.io/badge/🔗_Connect_on_LinkedIn-0A66C2?style=for-the-badge)](https://www.linkedin.com/in/zulqarnain-nazir/)
 
 <br/>
