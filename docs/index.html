@@ -7,7 +7,7 @@
 <meta name="description" content="Principal Full Stack Software Engineer, 12+ years. Enterprise SaaS, Healthcare, FinTech, and production AI/agent systems." />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
@@ -15,19 +15,19 @@
     theme: {
       extend: {
         colors: {
-          bgdeep: '#0B0918',
-          bgpanel: '#15112B',
-          bgpanel2: '#1B1638',
-          violet: '#7F5AF0',
-          cyan: '#2CB1FF',
-          amber: '#FFD166',
-          muted: '#9D97C9',
-          hair: '#2A2450',
+          blue: '#0A2540',
+          blueDeep: '#071B2E',
+          blueCard: '#0D2E4C',
+          paper: '#EAF1F6',
+          line: '#5EEAD4',
+          signal: '#F5A623',
+          slate: '#84A2B8',
+          hairline: '#1B4363',
         },
         fontFamily: {
-          display: ['"Space Grotesk"', 'sans-serif'],
-          body: ['"Inter"', 'sans-serif'],
-          mono: ['"Fira Code"', 'monospace'],
+          display: ['"Archivo"', 'sans-serif'],
+          body: ['"IBM Plex Sans"', 'sans-serif'],
+          mono: ['"IBM Plex Mono"', 'monospace'],
         },
       },
     },
@@ -36,38 +36,54 @@
 
 <style>
   html { scroll-behavior: smooth; }
-  body { background-color: #0B0918; }
+  body { background-color: #0A2540; }
 
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
   }
 
-  ::selection { background: #7F5AF0; color: #fff; }
+  ::selection { background: #5EEAD4; color: #0A2540; }
 
   a:focus-visible, button:focus-visible, summary:focus-visible {
-    outline: 2px solid #2CB1FF;
+    outline: 2px solid #5EEAD4;
     outline-offset: 3px;
-    border-radius: 4px;
+    border-radius: 2px;
   }
 
-  .blob {
-    position: absolute;
-    border-radius: 9999px;
-    filter: blur(90px);
-    opacity: 0.35;
+  /* Blueprint grid backdrop */
+  .grid-bg {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
     pointer-events: none;
+    background-image:
+      linear-gradient(rgba(94,234,212,0.055) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(94,234,212,0.055) 1px, transparent 1px),
+      linear-gradient(rgba(94,234,212,0.11) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(94,234,212,0.11) 1px, transparent 1px);
+    background-size: 16px 16px, 16px 16px, 80px 80px, 80px 80px;
   }
-  @keyframes floatA { 0%,100% { transform: translate(0,0); } 50% { transform: translate(30px,-24px); } }
-  @keyframes floatB { 0%,100% { transform: translate(0,0); } 50% { transform: translate(-24px,28px); } }
-  .blob-a { animation: floatA 14s ease-in-out infinite; }
-  .blob-b { animation: floatB 17s ease-in-out infinite; }
 
-  .cursor { display:inline-block; width:8px; height:1.1em; background:#2CB1FF; margin-left:2px; vertical-align:-2px; animation: blink 1s steps(1) infinite; }
+  /* Corner registration marks — the blueprint signature */
+  .reg-corners { position: relative; }
+  .reg-corners::before, .reg-corners::after,
+  .reg-corners .rc-tl, .reg-corners .rc-tr, .reg-corners .rc-bl, .reg-corners .rc-br { position: absolute; width: 14px; height: 14px; pointer-events: none; }
+  .reg-corners .rc-tl { top: -1px; left: -1px; border-top: 2px solid #5EEAD4; border-left: 2px solid #5EEAD4; }
+  .reg-corners .rc-tr { top: -1px; right: -1px; border-top: 2px solid #5EEAD4; border-right: 2px solid #5EEAD4; }
+  .reg-corners .rc-bl { bottom: -1px; left: -1px; border-bottom: 2px solid #5EEAD4; border-left: 2px solid #5EEAD4; }
+  .reg-corners .rc-br { bottom: -1px; right: -1px; border-bottom: 2px solid #5EEAD4; border-right: 2px solid #5EEAD4; }
+
+  /* Dimension-line section header */
+  .dim-line { display: flex; align-items: center; gap: 12px; }
+  .dim-line .tick { width: 1px; height: 14px; background: #5EEAD4; opacity: .6; }
+  .dim-line .rule { flex: 1; height: 1px; background: linear-gradient(90deg, rgba(94,234,212,.5), rgba(94,234,212,0)); }
+
+  .cursor { display:inline-block; width:8px; height:1.1em; background:#5EEAD4; margin-left:2px; vertical-align:-2px; animation: blink 1s steps(1) infinite; }
   @keyframes blink { 50% { opacity:0; } }
 
   @keyframes shimmer { 0% { background-position: -300px 0; } 100% { background-position: 300px 0; } }
   .skeleton {
-    background: linear-gradient(90deg, #1B1638 0%, #241E4A 50%, #1B1638 100%);
+    background: linear-gradient(90deg, #0D2E4C 0%, #123A5E 50%, #0D2E4C 100%);
     background-size: 300px 100%;
     animation: shimmer 1.4s ease-in-out infinite;
   }
@@ -79,258 +95,298 @@
     transition: border-color .25s ease, transform .25s ease, box-shadow .25s ease;
   }
   .card-glow:hover {
-    border-color: #7F5AF0;
+    border-color: #5EEAD4;
     transform: translateY(-3px);
-    box-shadow: 0 10px 30px -10px rgba(127,90,240,0.45);
+    box-shadow: 0 10px 28px -12px rgba(94,234,212,0.35);
   }
 
-  .badge-key { font-family: 'Fira Code', monospace; letter-spacing: 0.02em; }
+  .badge-key { font-family: 'IBM Plex Mono', monospace; letter-spacing: 0.03em; }
+
+  /* Scanning sweep on hero panel, subtle, single orchestrated moment */
+  @keyframes sweep { 0% { transform: translateY(-100%); } 100% { transform: translateY(100%); } }
+  .scan-sweep { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+  .scan-sweep::after {
+    content: ''; position: absolute; left: 0; right: 0; height: 40%;
+    background: linear-gradient(to bottom, rgba(94,234,212,0) 0%, rgba(94,234,212,0.06) 50%, rgba(94,234,212,0) 100%);
+    animation: sweep 6s linear infinite;
+  }
 </style>
 </head>
 
-<body class="font-body text-[#F5F3FF] antialiased">
+<body class="font-body text-paper antialiased relative">
+<div class="grid-bg"></div>
 
   <!-- NAV -->
-  <header class="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-[#0B0918]/70 border-b border-hair">
+  <header class="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-blue/80 border-b border-hairline">
     <nav class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-      <a href="#top" class="font-display font-700 text-lg tracking-tight">ZN<span class="text-violet">.</span></a>
-      <div class="hidden md:flex items-center gap-8 text-sm text-muted font-medium">
-        <a href="#work" class="hover:text-white transition-colors">Work</a>
-        <a href="#ai" class="hover:text-white transition-colors">AI Systems</a>
-        <a href="#experience" class="hover:text-white transition-colors">Experience</a>
-        <a href="#stack" class="hover:text-white transition-colors">Stack</a>
-        <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+      <a href="#top" class="font-display font-extrabold text-lg tracking-tight">ZN<span class="text-line">.</span></a>
+      <div class="hidden md:flex items-center gap-8 text-sm text-slate font-medium badge-key">
+        <a href="#work" class="hover:text-paper transition-colors">Work</a>
+        <a href="#ai" class="hover:text-paper transition-colors">AI Systems</a>
+        <a href="#experience" class="hover:text-paper transition-colors">Experience</a>
+        <a href="#stack" class="hover:text-paper transition-colors">Stack</a>
+        <a href="#contact" class="hover:text-paper transition-colors">Contact</a>
       </div>
-      <a href="#contact" class="text-sm font-semibold px-4 py-2 rounded-lg bg-violet hover:bg-violet/80 transition-colors">Let's talk</a>
+      <a href="#contact" class="text-sm font-semibold px-4 py-2 rounded bg-line text-blue hover:bg-line/85 transition-colors">Let's talk</a>
     </nav>
   </header>
 
   <!-- HERO -->
   <section id="top" class="relative overflow-hidden pt-40 pb-24 px-6">
-    <div class="blob blob-a w-[420px] h-[420px] bg-violet -top-20 -left-20"></div>
-    <div class="blob blob-b w-[380px] h-[380px] bg-cyan top-40 right-0"></div>
-
     <div class="max-w-6xl mx-auto relative grid lg:grid-cols-2 gap-14 items-center">
       <div class="reveal in">
-        <p class="badge-key text-xs uppercase text-cyan mb-4">Principal Full Stack &amp; AI Systems Engineer</p>
-        <h1 class="font-display font-700 text-5xl sm:text-6xl leading-[1.05] tracking-tight mb-6">
+        <p class="badge-key text-xs uppercase tracking-widest text-line mb-4">// Principal Full Stack &amp; AI Systems Engineer</p>
+        <h1 class="font-display font-extrabold text-5xl sm:text-6xl leading-[1.05] tracking-tight mb-6">
           Zulqarnain<br/>Nazir
         </h1>
-        <p class="text-muted text-lg leading-relaxed mb-8 max-w-lg">
+        <p class="text-slate text-lg leading-relaxed mb-8 max-w-lg">
           I help startups rescue legacy systems and ship production-grade SaaS &amp; AI platforms — architecture that survives contact with real users, not just the demo.
         </p>
         <div class="flex flex-wrap gap-4 mb-10">
-          <a href="#work" class="px-5 py-3 rounded-lg bg-violet hover:bg-violet/80 font-semibold text-sm transition-colors">View my work</a>
-          <a href="https://www.upwork.com/freelancers/zulqarnainnazir" target="_blank" rel="noopener" class="px-5 py-3 rounded-lg border border-hair hover:border-cyan font-semibold text-sm transition-colors">Book a call</a>
+          <a href="#work" class="px-5 py-3 rounded bg-line text-blue hover:bg-line/85 font-semibold text-sm transition-colors">View my work</a>
+          <a href="https://www.upwork.com/freelancers/zulqarnainnazir" target="_blank" rel="noopener" class="px-5 py-3 rounded border border-hairline hover:border-line font-semibold text-sm transition-colors">Book a call</a>
         </div>
-        <div class="flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted badge-key">
-          <span><span class="text-white font-semibold">12+</span> years</span>
-          <span class="text-hair">•</span>
-          <span><span class="text-white font-semibold">30+</span> production systems</span>
-          <span class="text-hair">•</span>
-          <span><span class="text-white font-semibold">5/5</span> client rating</span>
+        <div class="flex flex-wrap gap-x-6 gap-y-2 text-sm text-slate badge-key">
+          <span><span class="text-paper font-semibold">12+</span> years</span>
+          <span class="text-hairline">/</span>
+          <span><span class="text-paper font-semibold">30+</span> production systems</span>
+          <span class="text-hairline">/</span>
+          <span><span class="text-paper font-semibold">5/5</span> client rating</span>
         </div>
       </div>
 
-      <!-- SIGNATURE: agent trace terminal -->
+      <!-- SIGNATURE: blueprint schematic panel -->
       <div class="reveal in">
-        <div class="rounded-2xl border border-hair bg-bgpanel/80 shadow-2xl shadow-black/40 overflow-hidden">
-          <div class="flex items-center gap-2 px-4 py-3 border-b border-hair bg-bgpanel2/60">
-            <span class="w-3 h-3 rounded-full bg-[#FF5F56]"></span>
-            <span class="w-3 h-3 rounded-full bg-[#FFBD2E]"></span>
-            <span class="w-3 h-3 rounded-full bg-[#27C93F]"></span>
-            <span class="badge-key text-xs text-muted ml-3">agent_trace.log</span>
+        <div class="reg-corners rounded-sm border border-hairline bg-blueDeep/80 shadow-2xl shadow-black/40 overflow-hidden">
+          <span class="rc-tl"></span><span class="rc-tr"></span><span class="rc-bl"></span><span class="rc-br"></span>
+          <div class="scan-sweep"></div>
+          <div class="flex items-center justify-between gap-2 px-4 py-3 border-b border-hairline bg-blueCard/50">
+            <span class="badge-key text-xs text-slate">SCHEMATIC — AGENT TRACE</span>
+            <span class="badge-key text-[10px] text-signal">● LIVE</span>
           </div>
           <div id="trace" class="p-6 font-mono text-[13px] leading-7 min-h-[260px]"></div>
+          <div class="flex items-center justify-between gap-2 px-4 py-2 border-t border-hairline bg-blueCard/50 badge-key text-[10px] text-slate">
+            <span>DRAWN BY: Z. NAZIR</span>
+            <span>SCALE: NTS</span>
+            <span>REV: 2026.07</span>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- STAT STRIP -->
-  <section class="px-6 pb-4">
+  <section class="relative px-6 pb-4">
     <div class="max-w-6xl mx-auto reveal flex flex-wrap justify-center gap-3">
-      <span class="badge-key text-xs px-4 py-2 rounded-full bg-bgpanel border border-hair">EXPERIENCE <b class="text-violet">12+ YEARS</b></span>
-      <span class="badge-key text-xs px-4 py-2 rounded-full bg-bgpanel border border-hair">JOB SUCCESS <b class="text-cyan">100%</b></span>
-      <span class="badge-key text-xs px-4 py-2 rounded-full bg-bgpanel border border-hair">RATING <b class="text-amber">5/5</b></span>
-      <span class="badge-key text-xs px-4 py-2 rounded-full bg-bgpanel border border-hair">UPWORK <b class="text-[#3CE070]">TOP RATED PLUS</b></span>
-      <span class="badge-key text-xs px-4 py-2 rounded-full bg-bgpanel border border-hair">HOURS <b class="text-violet">5.2K+</b></span>
-      <span class="badge-key text-xs px-4 py-2 rounded-full bg-bgpanel border border-hair">CONTRACTS <b class="text-cyan">34</b></span>
+      <span class="badge-key text-xs px-4 py-2 rounded border border-hairline bg-blueDeep/60">EXPERIENCE <b class="text-line">12+ YEARS</b></span>
+      <span class="badge-key text-xs px-4 py-2 rounded border border-hairline bg-blueDeep/60">JOB SUCCESS <b class="text-line">100%</b></span>
+      <span class="badge-key text-xs px-4 py-2 rounded border border-hairline bg-blueDeep/60">RATING <b class="text-signal">5/5</b></span>
+      <span class="badge-key text-xs px-4 py-2 rounded border border-hairline bg-blueDeep/60">UPWORK <b class="text-line">TOP RATED PLUS</b></span>
+      <span class="badge-key text-xs px-4 py-2 rounded border border-hairline bg-blueDeep/60">HOURS <b class="text-line">5.2K+</b></span>
+      <span class="badge-key text-xs px-4 py-2 rounded border border-hairline bg-blueDeep/60">CONTRACTS <b class="text-signal">34</b></span>
     </div>
   </section>
 
   <!-- SPECIALISATIONS -->
-  <section id="specialisations" class="max-w-6xl mx-auto px-6 py-24">
-    <div class="reveal mb-12">
-      <p class="badge-key text-xs uppercase text-cyan mb-3">Where I work</p>
-      <h2 class="font-display font-700 text-3xl sm:text-4xl">Specialisations</h2>
+  <section id="specialisations" class="relative max-w-6xl mx-auto px-6 py-24">
+    <div class="reveal mb-12 dim-line">
+      <span class="tick"></span>
+      <p class="badge-key text-xs uppercase tracking-widest text-line whitespace-nowrap">01 / WHERE I WORK</p>
+      <span class="rule"></span>
     </div>
+    <h2 class="reveal font-display font-extrabold text-3xl sm:text-4xl mb-12">Specialisations</h2>
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
 
-      <div class="reveal card-glow p-6 rounded-xl border border-hair bg-bgpanel">
+      <div class="reveal reg-corners card-glow p-6 rounded-sm border border-hairline bg-blueDeep/60">
+        <span class="rc-tl"></span><span class="rc-br"></span>
         <div class="text-2xl mb-3">🏥</div>
-        <h3 class="font-display font-600 text-lg mb-2">Healthcare</h3>
-        <p class="text-muted text-sm mb-4">Clinical workflow systems, patient-facing modules, secure data handling.</p>
-        <span class="badge-key text-[11px] text-cyan">HIPAA · HL7/FHIR</span>
+        <h3 class="font-display font-bold text-lg mb-2">Healthcare</h3>
+        <p class="text-slate text-sm mb-4">Clinical workflow systems, patient-facing modules, secure data handling.</p>
+        <span class="badge-key text-[11px] text-line">HIPAA · HL7/FHIR</span>
       </div>
 
-      <div class="reveal card-glow p-6 rounded-xl border border-hair bg-bgpanel">
+      <div class="reveal reg-corners card-glow p-6 rounded-sm border border-hairline bg-blueDeep/60">
+        <span class="rc-tl"></span><span class="rc-br"></span>
         <div class="text-2xl mb-3">💳</div>
-        <h3 class="font-display font-600 text-lg mb-2">FinTech</h3>
-        <p class="text-muted text-sm mb-4">Mortgage &amp; lending platforms, banking API integrations, dashboards.</p>
-        <span class="badge-key text-[11px] text-cyan">PCI-DSS · GDPR</span>
+        <h3 class="font-display font-bold text-lg mb-2">FinTech</h3>
+        <p class="text-slate text-sm mb-4">Mortgage &amp; lending platforms, banking API integrations, dashboards.</p>
+        <span class="badge-key text-[11px] text-line">PCI-DSS · GDPR</span>
       </div>
 
-      <div class="reveal card-glow p-6 rounded-xl border border-hair bg-bgpanel">
+      <div class="reveal reg-corners card-glow p-6 rounded-sm border border-hairline bg-blueDeep/60">
+        <span class="rc-tl"></span><span class="rc-br"></span>
         <div class="text-2xl mb-3">🏢</div>
-        <h3 class="font-display font-600 text-lg mb-2">Enterprise SaaS</h3>
-        <p class="text-muted text-sm mb-4">Multi-tenant platforms, architecture strategy, technical leadership.</p>
-        <span class="badge-key text-[11px] text-cyan">SOC2-ready patterns</span>
+        <h3 class="font-display font-bold text-lg mb-2">Enterprise SaaS</h3>
+        <p class="text-slate text-sm mb-4">Multi-tenant platforms, architecture strategy, technical leadership.</p>
+        <span class="badge-key text-[11px] text-line">SOC2-ready patterns</span>
       </div>
 
-      <div class="reveal card-glow p-6 rounded-xl border border-hair bg-bgpanel">
+      <div class="reveal reg-corners card-glow p-6 rounded-sm border border-hairline bg-blueDeep/60">
+        <span class="rc-tl"></span><span class="rc-br"></span>
         <div class="text-2xl mb-3">🤖</div>
-        <h3 class="font-display font-600 text-lg mb-2">AI / LLM Automation</h3>
-        <p class="text-muted text-sm mb-4">Production LLM integrations, structured outputs, agent orchestration.</p>
-        <span class="badge-key text-[11px] text-cyan">Python (FastAPI) · OpenAI · Node.js</span>
+        <h3 class="font-display font-bold text-lg mb-2">AI / LLM Automation</h3>
+        <p class="text-slate text-sm mb-4">Production LLM integrations, structured outputs, agent orchestration.</p>
+        <span class="badge-key text-[11px] text-line">Python (FastAPI) · OpenAI · Node.js</span>
       </div>
 
-      <div class="reveal card-glow p-6 rounded-xl border border-hair bg-bgpanel">
+      <div class="reveal reg-corners card-glow p-6 rounded-sm border border-hairline bg-blueDeep/60">
+        <span class="rc-tl"></span><span class="rc-br"></span>
         <div class="text-2xl mb-3">🏘</div>
-        <h3 class="font-display font-600 text-lg mb-2">Real Estate / Marketplace</h3>
-        <p class="text-muted text-sm mb-4">Data intelligence platforms, real-time analytics.</p>
-        <span class="badge-key text-[11px] text-cyan">Query &amp; infra optimization</span>
+        <h3 class="font-display font-bold text-lg mb-2">Real Estate / Marketplace</h3>
+        <p class="text-slate text-sm mb-4">Data intelligence platforms, real-time analytics.</p>
+        <span class="badge-key text-[11px] text-line">Query &amp; infra optimization</span>
       </div>
 
     </div>
   </section>
 
   <!-- AI & AGENTIC -->
-  <section id="ai" class="relative px-6 py-24 border-y border-hair bg-bgpanel/40">
+  <section id="ai" class="relative px-6 py-24 border-y border-hairline bg-blueDeep/30">
     <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-14 items-center">
       <div class="reveal">
-        <p class="badge-key text-xs uppercase text-cyan mb-3">Part of the daily workflow</p>
-        <h2 class="font-display font-700 text-3xl sm:text-4xl mb-6">AI &amp; Agentic Engineering</h2>
-        <p class="text-muted mb-6 leading-relaxed">I design and ship production AI systems — agents that call tools, cite sources, and hold up under real usage, not just demo scripts.</p>
+        <div class="dim-line mb-3">
+          <span class="tick"></span>
+          <p class="badge-key text-xs uppercase tracking-widest text-line whitespace-nowrap">02 / DAILY WORKFLOW</p>
+          <span class="rule"></span>
+        </div>
+        <h2 class="font-display font-extrabold text-3xl sm:text-4xl mb-6">AI &amp; Agentic Engineering</h2>
+        <p class="text-slate mb-6 leading-relaxed">I design and ship production AI systems — agents that call tools, cite sources, and hold up under real usage, not just demo scripts.</p>
         <ul class="space-y-4 text-sm">
-          <li class="flex gap-3"><span class="text-violet">→</span><span><b class="text-white">Agent orchestration</b> <span class="text-muted">— multi-step planning, tool-calling, structured outputs with validation &amp; fallback design</span></span></li>
-          <li class="flex gap-3"><span class="text-violet">→</span><span><b class="text-white">RAG &amp; retrieval</b> <span class="text-muted">— grounding LLM output in real data instead of hallucinated answers</span></span></li>
-          <li class="flex gap-3"><span class="text-violet">→</span><span><b class="text-white">Multi-channel delivery</b> <span class="text-muted">— chat agents accessible via web, WhatsApp, Telegram &amp; email</span></span></li>
-          <li class="flex gap-3"><span class="text-violet">→</span><span><b class="text-white">Production hardening</b> <span class="text-muted">— rate limits, observability, graceful degradation</span></span></li>
+          <li class="flex gap-3"><span class="text-signal">→</span><span><b class="text-paper">Agent orchestration</b> <span class="text-slate">— multi-step planning, tool-calling, structured outputs with validation &amp; fallback design</span></span></li>
+          <li class="flex gap-3"><span class="text-signal">→</span><span><b class="text-paper">RAG &amp; retrieval</b> <span class="text-slate">— grounding LLM output in real data instead of hallucinated answers</span></span></li>
+          <li class="flex gap-3"><span class="text-signal">→</span><span><b class="text-paper">Multi-channel delivery</b> <span class="text-slate">— chat agents accessible via web, WhatsApp, Telegram &amp; email</span></span></li>
+          <li class="flex gap-3"><span class="text-signal">→</span><span><b class="text-paper">Production hardening</b> <span class="text-slate">— rate limits, observability, graceful degradation</span></span></li>
         </ul>
       </div>
-      <div class="reveal rounded-2xl border border-hair bg-bgpanel p-4">
-        <img src="assets/ai-architecture.svg" alt="Agent architecture diagram: user through client, API, agent orchestrator, to LLM and tools" class="w-full rounded-lg" />
+      <div class="reveal reg-corners rounded-sm border border-hairline bg-blueDeep p-4">
+        <span class="rc-tl"></span><span class="rc-tr"></span><span class="rc-bl"></span><span class="rc-br"></span>
+        <img src="assets/ai-architecture.svg" alt="Agent architecture diagram: user through client, API, agent orchestrator, to LLM and tools" class="w-full rounded-sm" />
       </div>
     </div>
   </section>
 
   <!-- PROJECTS -->
-  <section id="work" class="max-w-6xl mx-auto px-6 py-24">
-    <div class="reveal mb-12">
-      <p class="badge-key text-xs uppercase text-cyan mb-3">Selected work</p>
-      <h2 class="font-display font-700 text-3xl sm:text-4xl">Projects</h2>
+  <section id="work" class="relative max-w-6xl mx-auto px-6 py-24">
+    <div class="reveal mb-12 dim-line">
+      <span class="tick"></span>
+      <p class="badge-key text-xs uppercase tracking-widest text-line whitespace-nowrap">03 / SELECTED WORK</p>
+      <span class="rule"></span>
     </div>
+    <h2 class="reveal font-display font-extrabold text-3xl sm:text-4xl mb-12">Projects</h2>
     <div id="projects-grid" class="grid sm:grid-cols-2 gap-5"></div>
   </section>
 
   <!-- EXPERIENCE -->
-  <section id="experience" class="max-w-6xl mx-auto px-6 py-24">
-    <div class="reveal mb-12">
-      <p class="badge-key text-xs uppercase text-cyan mb-3">Track record</p>
-      <h2 class="font-display font-700 text-3xl sm:text-4xl">Experience</h2>
+  <section id="experience" class="relative max-w-6xl mx-auto px-6 py-24">
+    <div class="reveal mb-12 dim-line">
+      <span class="tick"></span>
+      <p class="badge-key text-xs uppercase tracking-widest text-line whitespace-nowrap">04 / TRACK RECORD</p>
+      <span class="rule"></span>
     </div>
+    <h2 class="reveal font-display font-extrabold text-3xl sm:text-4xl mb-12">Experience</h2>
 
-    <div class="relative border-l border-hair ml-2 space-y-10">
+    <div class="relative border-l border-hairline ml-2 space-y-10">
 
       <div class="reveal relative pl-8">
-        <span class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-violet"></span>
-        <p class="badge-key text-xs text-muted mb-1">2025 — Present</p>
-        <h3 class="font-display font-600 text-lg">Principal Full Stack Software Engineer <span class="text-muted font-body font-normal">· Revivo Technology</span></h3>
-        <p class="text-muted text-sm mt-2 max-w-2xl">Leading architecture &amp; development of enterprise SaaS, AI, and healthcare platforms. Driving engineering excellence through architecture reviews, coding standards, and mentoring. Delivering production LLM integrations with validation &amp; fallback layers.</p>
+        <span class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-line"></span>
+        <p class="badge-key text-xs text-slate mb-1">2025 — Present</p>
+        <h3 class="font-display font-bold text-lg">Principal Full Stack Software Engineer <span class="text-slate font-body font-normal">· Revivo Technology</span></h3>
+        <p class="text-slate text-sm mt-2 max-w-2xl">Leading architecture &amp; development of enterprise SaaS, AI, and healthcare platforms. Driving engineering excellence through architecture reviews, coding standards, and mentoring. Delivering production LLM integrations with validation &amp; fallback layers.</p>
       </div>
 
       <div class="reveal relative pl-8">
-        <span class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-cyan"></span>
-        <p class="badge-key text-xs text-muted mb-1">2020 — Present</p>
-        <h3 class="font-display font-600 text-lg">Full Stack Architect &amp; Technical Consultant <span class="text-muted font-body font-normal">· Upwork</span></h3>
-        <p class="text-muted text-sm mt-2 max-w-2xl">Delivered 30+ enterprise SaaS, AI, FinTech, Healthcare, Marketplace &amp; Real Estate applications. Top Rated Plus (Top 3% worldwide), 100% Job Success, 5,200+ hours, 34 contracts.</p>
+        <span class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-slate"></span>
+        <p class="badge-key text-xs text-slate mb-1">2020 — Present</p>
+        <h3 class="font-display font-bold text-lg">Full Stack Architect &amp; Technical Consultant <span class="text-slate font-body font-normal">· Upwork</span></h3>
+        <p class="text-slate text-sm mt-2 max-w-2xl">Delivered 30+ enterprise SaaS, AI, FinTech, Healthcare, Marketplace &amp; Real Estate applications. Top Rated Plus (Top 3% worldwide), 100% Job Success, 5,200+ hours, 34 contracts.</p>
       </div>
 
       <div class="reveal relative pl-8">
-        <span class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-cyan"></span>
-        <p class="badge-key text-xs text-muted mb-1">2021 — 2024</p>
-        <h3 class="font-display font-600 text-lg">Senior Software Engineer <span class="text-muted font-body font-normal">· D3velopers</span></h3>
-        <p class="text-muted text-sm mt-2 max-w-2xl">Built and optimized REST APIs for enterprise React applications. Improved backend performance through query optimization and database redesign.</p>
+        <span class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-slate"></span>
+        <p class="badge-key text-xs text-slate mb-1">2021 — 2024</p>
+        <h3 class="font-display font-bold text-lg">Senior Software Engineer <span class="text-slate font-body font-normal">· D3velopers</span></h3>
+        <p class="text-slate text-sm mt-2 max-w-2xl">Built and optimized REST APIs for enterprise React applications. Improved backend performance through query optimization and database redesign.</p>
       </div>
 
       <div class="reveal relative pl-8">
-        <span class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-cyan"></span>
-        <p class="badge-key text-xs text-muted mb-1">2022 — 2023</p>
-        <h3 class="font-display font-600 text-lg">Senior Ruby on Rails Developer <span class="text-muted font-body font-normal">· Kinship, USA</span></h3>
-        <p class="text-muted text-sm mt-2 max-w-2xl">Designed REST &amp; GraphQL APIs powering nationwide reporting systems (Shelter Animals Count / ASPCA).</p>
+        <span class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-slate"></span>
+        <p class="badge-key text-xs text-slate mb-1">2022 — 2023</p>
+        <h3 class="font-display font-bold text-lg">Senior Ruby on Rails Developer <span class="text-slate font-body font-normal">· Kinship, USA</span></h3>
+        <p class="text-slate text-sm mt-2 max-w-2xl">Designed REST &amp; GraphQL APIs powering nationwide reporting systems (Shelter Animals Count / ASPCA).</p>
       </div>
 
       <div class="reveal relative pl-8">
-        <span class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-cyan"></span>
-        <p class="badge-key text-xs text-muted mb-1">2016 — 2021</p>
-        <h3 class="font-display font-600 text-lg">Full Stack Software Engineer <span class="text-muted font-body font-normal">· Analytico Technologies</span></h3>
-        <p class="text-muted text-sm mt-2 max-w-2xl">Built enterprise SaaS applications across Node.js, React, Rails, MongoDB &amp; PostgreSQL. Applied TDD/BDD methodologies within Agile Scrum teams.</p>
+        <span class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-slate"></span>
+        <p class="badge-key text-xs text-slate mb-1">2016 — 2021</p>
+        <h3 class="font-display font-bold text-lg">Full Stack Software Engineer <span class="text-slate font-body font-normal">· Analytico Technologies</span></h3>
+        <p class="text-slate text-sm mt-2 max-w-2xl">Built enterprise SaaS applications across Node.js, React, Rails, MongoDB &amp; PostgreSQL. Applied TDD/BDD methodologies within Agile Scrum teams.</p>
       </div>
 
     </div>
   </section>
 
   <!-- TECH STACK -->
-  <section id="stack" class="max-w-6xl mx-auto px-6 py-24">
-    <div class="reveal mb-12">
-      <p class="badge-key text-xs uppercase text-cyan mb-3">Toolbox</p>
-      <h2 class="font-display font-700 text-3xl sm:text-4xl">Tech Stack</h2>
+  <section id="stack" class="relative max-w-6xl mx-auto px-6 py-24">
+    <div class="reveal mb-12 dim-line">
+      <span class="tick"></span>
+      <p class="badge-key text-xs uppercase tracking-widest text-line whitespace-nowrap">05 / TOOLBOX</p>
+      <span class="rule"></span>
     </div>
+    <h2 class="reveal font-display font-extrabold text-3xl sm:text-4xl mb-12">Tech Stack</h2>
     <div class="reveal space-y-8">
       <div>
-        <p class="badge-key text-xs text-muted mb-3">LANGUAGES</p>
+        <p class="badge-key text-xs text-slate mb-3">LANGUAGES</p>
         <img src="https://skillicons.dev/icons?i=js,ts,ruby,py,fastapi,html,css&theme=dark" alt="JavaScript, TypeScript, Ruby, Python, FastAPI, HTML, CSS" />
       </div>
       <div>
-        <p class="badge-key text-xs text-muted mb-3">FRAMEWORKS &amp; FRONTEND</p>
+        <p class="badge-key text-xs text-slate mb-3">FRAMEWORKS &amp; FRONTEND</p>
         <img src="https://skillicons.dev/icons?i=react,nextjs,redux,tailwind,nodejs,express,nestjs,rails&theme=dark" alt="React, Next.js, Redux, Tailwind, Node.js, Express, NestJS, Rails" />
       </div>
       <div>
-        <p class="badge-key text-xs text-muted mb-3">DATABASES &amp; CLOUD</p>
+        <p class="badge-key text-xs text-slate mb-3">DATABASES &amp; CLOUD</p>
         <img src="https://skillicons.dev/icons?i=postgres,mongodb,mysql,aws,gcp,docker,kubernetes&theme=dark" alt="PostgreSQL, MongoDB, MySQL, AWS, GCP, Docker, Kubernetes" />
       </div>
       <div>
-        <p class="badge-key text-xs text-muted mb-3">TOOLS &amp; PRACTICES</p>
+        <p class="badge-key text-xs text-slate mb-3">TOOLS &amp; PRACTICES</p>
         <img src="https://skillicons.dev/icons?i=git,github,graphql,jenkins,githubactions,jira,postman&theme=dark" alt="Git, GitHub, GraphQL, Jenkins, GitHub Actions, Jira, Postman" />
       </div>
     </div>
   </section>
 
   <!-- CONTACT -->
-  <section id="contact" class="relative px-6 py-28 border-t border-hair overflow-hidden">
-    <div class="blob blob-a w-[380px] h-[380px] bg-violet bottom-0 left-1/3"></div>
+  <section id="contact" class="relative px-6 py-28 border-t border-hairline overflow-hidden">
     <div class="max-w-3xl mx-auto text-center relative reveal">
-      <p class="badge-key text-xs uppercase text-cyan mb-4">Let's work together</p>
-      <h2 class="font-display font-700 text-4xl sm:text-5xl mb-6">Let's build something reliable.</h2>
-      <p class="text-muted mb-10 max-w-xl mx-auto">Open to full-time roles, contract work, and technical consulting — architecture reviews, technical leadership, AI/LLM integration, and full-stack delivery from MVP to production scale.</p>
-      <div class="flex flex-wrap gap-4 justify-center mb-14">
-        <a href="https://www.upwork.com/freelancers/zulqarnainnazir" target="_blank" rel="noopener" class="px-6 py-3 rounded-lg bg-[#14A800] font-semibold text-sm hover:opacity-90 transition-opacity">Hire me on Upwork</a>
-        <a href="mailto:zulqarnainnazir1@gmail.com" class="px-6 py-3 rounded-lg bg-cyan text-[#0B0918] font-semibold text-sm hover:opacity-90 transition-opacity">Email me</a>
-        <a href="https://www.linkedin.com/in/zulqarnain-nazir/" target="_blank" rel="noopener" class="px-6 py-3 rounded-lg border border-hair font-semibold text-sm hover:border-cyan transition-colors">Connect on LinkedIn</a>
+      <div class="dim-line justify-center mb-4">
+        <span class="tick"></span>
+        <p class="badge-key text-xs uppercase tracking-widest text-line whitespace-nowrap">06 / LET'S WORK TOGETHER</p>
+        <span class="tick"></span>
       </div>
-      <div class="flex justify-center gap-6 text-sm text-muted badge-key">
-        <a href="https://github.com/ZulqarnainNazir" target="_blank" rel="noopener" class="hover:text-white transition-colors">GitHub</a>
-        <span class="text-hair">/</span>
-        <a href="https://www.upwork.com/freelancers/zulqarnainnazir" target="_blank" rel="noopener" class="hover:text-white transition-colors">Upwork</a>
-        <span class="text-hair">/</span>
-        <a href="https://www.linkedin.com/in/zulqarnain-nazir/" target="_blank" rel="noopener" class="hover:text-white transition-colors">LinkedIn</a>
+      <h2 class="font-display font-extrabold text-4xl sm:text-5xl mb-6">Let's build something reliable.</h2>
+      <p class="text-slate mb-10 max-w-xl mx-auto">Open to full-time roles, contract work, and technical consulting — architecture reviews, technical leadership, AI/LLM integration, and full-stack delivery from MVP to production scale.</p>
+      <div class="flex flex-wrap gap-4 justify-center mb-14">
+        <a href="https://www.upwork.com/freelancers/zulqarnainnazir" target="_blank" rel="noopener" class="px-6 py-3 rounded bg-[#14A800] font-semibold text-sm hover:opacity-90 transition-opacity">Hire me on Upwork</a>
+        <a href="mailto:zulqarnainnazir1@gmail.com" class="px-6 py-3 rounded bg-line text-blue font-semibold text-sm hover:opacity-90 transition-opacity">Email me</a>
+        <a href="https://www.linkedin.com/in/zulqarnain-nazir/" target="_blank" rel="noopener" class="px-6 py-3 rounded border border-hairline font-semibold text-sm hover:border-line transition-colors">Connect on LinkedIn</a>
+      </div>
+      <div class="flex justify-center gap-6 text-sm text-slate badge-key">
+        <a href="https://github.com/ZulqarnainNazir" target="_blank" rel="noopener" class="hover:text-paper transition-colors">GitHub</a>
+        <span class="text-hairline">/</span>
+        <a href="https://www.upwork.com/freelancers/zulqarnainnazir" target="_blank" rel="noopener" class="hover:text-paper transition-colors">Upwork</a>
+        <span class="text-hairline">/</span>
+        <a href="https://www.linkedin.com/in/zulqarnain-nazir/" target="_blank" rel="noopener" class="hover:text-paper transition-colors">LinkedIn</a>
       </div>
     </div>
   </section>
 
-  <footer class="text-center text-xs text-muted py-8 border-t border-hair badge-key">
-    © <span id="year"></span> Zulqarnain Nazir · Lahore, Pakistan
+  <!-- TITLE BLOCK FOOTER -->
+  <footer class="relative border-t border-hairline">
+    <div class="max-w-6xl mx-auto px-6 py-6 flex flex-wrap items-center justify-between gap-4 badge-key text-[11px] text-slate">
+      <span>DRAWING: PORTFOLIO-INDEX</span>
+      <span>DRAWN BY: ZULQARNAIN NAZIR</span>
+      <span>LOCATION: LAHORE, PK</span>
+      <span>STATUS: PRODUCTION-READY</span>
+      <span>© <span id="year"></span></span>
+    </div>
   </footer>
 
 <script>
@@ -345,13 +401,13 @@
 
   // Hero agent trace typing animation
   const traceLines = [
-    { t: '$ agent.run("evaluate_candidate_fit")', c: '#F5F3FF' },
-    { t: '→ planning steps...', c: '#9D97C9' },
-    { t: '→ calling tool: architecture_review()', c: '#2CB1FF' },
-    { t: '→ calling tool: production_history()', c: '#2CB1FF' },
-    { t: '→ validating output... ✓', c: '#FFD166' },
-    { t: '→ result: production-ready, 12+ yrs verified', c: '#3CE070' },
-    { t: '✓ done in 1.2s', c: '#7F5AF0' },
+    { t: '$ agent.run("evaluate_candidate_fit")', c: '#EAF1F6' },
+    { t: '→ planning steps...', c: '#84A2B8' },
+    { t: '→ calling tool: architecture_review()', c: '#5EEAD4' },
+    { t: '→ calling tool: production_history()', c: '#5EEAD4' },
+    { t: '→ validating output... ✓', c: '#F5A623' },
+    { t: '→ result: production-ready, 12+ yrs verified', c: '#5EEAD4' },
+    { t: '✓ done in 1.2s', c: '#F5A623' },
   ];
   const traceEl = document.getElementById('trace');
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -398,7 +454,7 @@
 
   function skeletonCard() {
     const d = document.createElement('div');
-    d.className = 'rounded-xl border border-hair bg-bgpanel p-6';
+    d.className = 'rounded-sm border border-hairline bg-blueDeep/60 p-6';
     d.innerHTML = `
       <div class="skeleton h-4 w-1/3 rounded mb-4"></div>
       <div class="skeleton h-3 w-full rounded mb-2"></div>
@@ -416,15 +472,16 @@
   function projectCard(p) {
     const wrap = document.createElement(p.url ? 'a' : 'div');
     if (p.url) { wrap.href = p.url; wrap.target = '_blank'; wrap.rel = 'noopener'; }
-    wrap.className = `reveal in card-glow rounded-xl border border-hair bg-bgpanel p-6 ${p.featured ? 'sm:col-span-2 bg-gradient-to-br from-bgpanel to-bgpanel2' : ''}`;
+    wrap.className = `reveal in reg-corners card-glow rounded-sm border border-hairline bg-blueDeep/60 p-6 ${p.featured ? 'sm:col-span-2 bg-gradient-to-br from-blueDeep to-blueCard' : ''}`;
     wrap.innerHTML = `
+      <span class="rc-tl"></span><span class="rc-br"></span>
       <div class="flex items-center gap-2 mb-2">
         ${p.featured ? '<span class="text-lg">🤖</span>' : ''}
-        <h3 class="font-display font-600 text-lg">${p.name}</h3>
+        <h3 class="font-display font-bold text-lg">${p.name}</h3>
       </div>
-      <p class="text-muted text-sm mb-4">${p.desc}</p>
+      <p class="text-slate text-sm mb-4">${p.desc}</p>
       <div class="flex flex-wrap gap-2">
-        ${p.tags.map(t => `<span class="badge-key text-[11px] px-2 py-1 rounded-full border border-hair text-muted">${t}</span>`).join('')}
+        ${p.tags.map(t => `<span class="badge-key text-[11px] px-2 py-1 rounded-full border border-hairline text-slate">${t}</span>`).join('')}
       </div>`;
     return wrap;
   }
