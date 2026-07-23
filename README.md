@@ -92,7 +92,7 @@ $ whoami
 <tr>
 <td>🤖 <b>AI / LLM Automation</b></td>
 <td>Production LLM integrations, structured outputs, agent orchestration</td>
-<td>OpenAI · Python · Node.js</td>
+<td>OpenAI · Python (FastAPI) · Node.js</td>
 <td>Validation layers, resilient fallback design</td>
 </tr>
 <tr>
@@ -139,7 +139,7 @@ The agent plans multi-step research (trade area analysis, brand-fit scoring, sit
 
 **Languages**
 <br/>
-![](https://skillicons.dev/icons?i=js,ts,ruby,py,html,css&theme=dark)
+![](https://skillicons.dev/icons?i=js,ts,ruby,py,fastapi,html,css&theme=dark)
 
 **Frameworks & Frontend**
 <br/>
@@ -206,11 +206,16 @@ The agent plans multi-step research (trade area analysis, brand-fit scoring, sit
 <table>
 <tr><th align="left">Project</th><th align="left">Description</th><th align="left">Tech</th></tr>
 <tr><td><b>🤖 CoBrokerAI</b></td><td><a href="https://www.cobroker.ai/">cobroker.ai</a> — agentic AI platform for commercial real estate, built solo end-to-end</td><td>Rails · Node.js · React · LLM Agents</td></tr>
-<tr><td><b>BlueBird</b></td><td>Enterprise healthcare information system</td><td>Rails · React · PostgreSQL · AWS</td></tr>
-<tr><td><b>Flyer</b></td><td>Real estate data intelligence SaaS, real-time analytics</td><td>React · Rails · AWS · Docker</td></tr>
-<tr><td><b>LoanLink24</b></td><td>Multi-bank mortgage comparison platform</td><td>Rails · PostgreSQL · React</td></tr>
-<tr><td><b>TENNA</b></td><td>Construction asset & fleet management platform</td><td>Rails · React · PostgreSQL · AWS</td></tr>
-<tr><td><b>Shelter Animals Count</b></td><td>Nationwide reporting system (Kinship / ASPCA)</td><td>Rails · MySQL · GraphQL</td></tr>
+<tr><td><b>PureSentinel</b></td><td><a href="https://puresentinel.com/">puresentinel.com</a> — food safety & quality LIMS platform, rebuilt from a buggy MVP and extended with AI automation</td><td>Python (FastAPI) · React · Next.js</td></tr>
+<tr><td><b>Flyer</b></td><td><a href="https://flyer.io/">flyer.io</a> — CRE marketing & data intelligence platform with interactive property maps, GIS overlays & automated marketing generation</td><td>Rails · React · Leaflet.js · GIS APIs</td></tr>
+<tr><td><b>IntelMS</b></td><td><a href="https://www.intelms.com/index.html">intelms.com</a> — healthcare staffing & workforce management platform, credentialing & compliance tracking</td><td>Rails · PostgreSQL</td></tr>
+<tr><td><b>TENNA</b></td><td><a href="https://www.tenna.com/">tenna.com</a> — construction asset & fleet management platform, real-time equipment tracking</td><td>Rails · React · Node.js · Elasticsearch · AWS</td></tr>
+<tr><td><b>Folio DB</b></td><td><a href="https://foliodb.net/">foliodb.net</a> — property portfolio platform for asset tracking, reports & investment recommendations</td><td>Rails · Elasticsearch</td></tr>
+<tr><td><b>Stock Savvy</b></td><td><a href="https://app.getstocksavvy.com/">getstocksavvy.com</a> — inventory management integrated with Shopify stores</td><td>Rails · React · Shopify</td></tr>
+<tr><td><b>FutureRx</b></td><td><a href="https://futurerx.com/">futurerx.com</a> — healthcare platform frontend with responsive React applications, reusable UI components & REST API integrations</td><td>Python · React · Redux</td></tr>
+<tr><td><b>PM Press</b></td><td><a href="https://pmpress.org/">pmpress.org</a> — rescued a 17-year-old legacy Rails codebase, upgraded to latest Rails, scaled infrastructure & shipped new features</td><td>Ruby on Rails · Legacy Modernization</td></tr>
+<tr><td><b>Baufi24</b></td><td><a href="https://www.baufi24.de/">baufi24.de</a> — high-scale German mortgage & lending platform, banking API & XML financial data integrations</td><td>Ruby on Rails · Banking APIs</td></tr>
+<tr><td><b>Shelter Animals Count</b></td><td><a href="https://www.shelteranimalscount.org/">shelteranimalscount.org</a> — nationwide reporting system (Kinship / ASPCA)</td><td>Rails · MySQL · GraphQL</td></tr>
 </table>
 
 ---
